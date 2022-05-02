@@ -52,7 +52,7 @@
 			"response": []
 		},
 		{
-			"name": "Client Request Token after Authentication",
+			"name": "Get Code After Authentication",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -66,19 +66,25 @@
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
+							"key": "grant_type",
+							"value": "urn:ietf:params:oauth:grant-type:device_code",
+							"type": "text"
+						},
+						{
 							"key": "client_id",
 							"value": "0oa1l4rl4c3IQluOA3l7",
 							"type": "text"
 						},
 						{
-							"key": "scope",
-							"value": "openid profile offline_access",
+							"key": "device_code",
+							"value": "a07e91a0-71a3-4e8e-9041-f724d56c5b39",
+							"description": "Paste your Device Code here",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "https://cbdevice.okta.com/oauth2/aus1l4r7i7vJE9zRF3l7/v1/device/authorize",
+					"raw": "https://cbdevice.okta.com/oauth2/aus1l4r7i7vJE9zRF3l7/v1/token",
 					"protocol": "https",
 					"host": [
 						"cbdevice",
@@ -89,8 +95,7 @@
 						"oauth2",
 						"aus1l4r7i7vJE9zRF3l7",
 						"v1",
-						"device",
-						"authorize"
+						"token"
 					]
 				}
 			},
