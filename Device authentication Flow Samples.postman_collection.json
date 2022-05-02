@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "b2bc4d3d-eeb4-4c0b-a999-ed5162009146",
+		"name": "Device authentication Flow Samples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Client Request Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "0oa1l4rl4c3IQluOA3l7",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "openid profile offline_access",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://cbdevice.okta.com//oauth2/default/v1/device/authorize",
+					"protocol": "https",
+					"host": [
+						"cbdevice",
+						"okta",
+						"com"
+					],
+					"path": [
+						"",
+						"oauth2",
+						"default",
+						"v1",
+						"device",
+						"authorize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client Request Token after Authentication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "0oa1l4rl4c3IQluOA3l7",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "openid profile offline_access",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://cbdevice.okta.com/oauth2/aus1l4r7i7vJE9zRF3l7/v1/device/authorize",
+					"protocol": "https",
+					"host": [
+						"cbdevice",
+						"okta",
+						"com"
+					],
+					"path": [
+						"oauth2",
+						"aus1l4r7i7vJE9zRF3l7",
+						"v1",
+						"device",
+						"authorize"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
